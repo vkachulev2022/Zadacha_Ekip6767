@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Zadachaekip
 {
-    internal class Numbers
+    public static int[] ReadArrayFromConsole()
     {
+        Console.WriteLine("Въведете числа, разделени с интервал:");
+        string input = Console.ReadLine();
+
+        int[] numbers = input
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse)
+            .ToArray();
+
+        return numbers;
     }
 }
