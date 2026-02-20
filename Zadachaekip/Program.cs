@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int[] numbers = ReadArray();
+            int[] sorted = SortArray(numbers, true);
+            SaveToJson(sorted);
+
+            Console.WriteLine("Масивът е сортиран и записан в JSON файл.");
         }
     }
 }
